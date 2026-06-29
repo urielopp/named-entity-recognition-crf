@@ -2,11 +2,6 @@
 
 This project implements a **Named Entity Recognition (NER)** system using **Conditional Random Fields (CRF)**, trained and evaluated on the **CoNLL-2002** corpus for **Spanish** and **Dutch**. The system identifies and classifies named entities (persons, organizations, locations, and miscellaneous entities) using `nltk.tag.CRFTagger`, with a custom feature-extraction pipeline, multiple tagging schemes, and a greedy feature-selection search.
 
-## Authors
-
-- Uriel Gil Palma
-- Hugo Ortí Toledo
-
 ## Overview
 
 The goal of this project is to build an automatic NER system with strong precision by:
