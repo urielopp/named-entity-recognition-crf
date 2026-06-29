@@ -15,7 +15,7 @@ The goal of this project is to build an automatic NER system with strong precisi
 - Comparing different **tagging schemes** (BIO, IO, BIOW, BIOE, BIOEW, BIOW+).
 - Selecting the most relevant features via a **Greedy Search**, parallelized with `joblib`.
 - Evaluating performance with a custom **partial F1-score** metric that rewards partially correct entity boundaries.
-- Testing the trained models on real-world, unseen text (extracted from news outlets) using **Stanza** for tokenization, POS-tagging, and lemmatization.
+- Testing the trained models on real-world, unseen text (extracted from the news) using **Stanza** for tokenization, POS-tagging, and lemmatization.
 
 ## Data
 
@@ -24,7 +24,7 @@ The goal of this project is to build an automatic NER system with strong precisi
 
 ## Feature Engineering
 
-Instead of using NLTK's default `CRFTagger` feature function, a custom `FeatFunc_Class` was implemented to allow fine-grained, per-language control over which features are active. Implemented feature groups include:
+Instead of using NLTK's default `CRFTagger` feature function, a custom `FeatFunc_Class` was implemented to easily turn individual features on or off for each language. Implemented feature groups include:
 
 - **Word & capitalization attributes:** lowercase word form, all-lowercase / all-uppercase / title-case detection.
 - **Alphanumeric information:** digit-only, alphanumeric, or mixed tokens.
@@ -117,4 +117,4 @@ The trained models were applied to genuine news sentences (Spanish: La Vanguardi
 
 - [CoNLL-2002 Shared Task: Language-Independent Named Entity Recognition](https://www.clips.uantwerpen.be/conll2002/ner/)
 
-**Note:** The detailed academic report containing the full implementation methodology, feature engineering rationale, greedy search results, and in-depth error analysis is available in the repository in Catalan (`memoria.pdf`).
+**Note:** The detailed academic report containing the full implementation methodology, feature engineering, greedy search results, and in-depth error analysis is available in the repository in Catalan as `memoria.pdf`.
